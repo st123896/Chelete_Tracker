@@ -7,7 +7,13 @@ import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
 import com.example.doon98.RoomDb.Category
 import com.example.doon98.databinding.ItemCategoryBinding
-
+/**
+ * RecyclerView adapter for category items
+ * - Implements ListAdapter with DiffUtil for efficient updates
+ * - Handles category display and delete actions
+ * - Includes view holder pattern for performance
+ * - Supports click listeners for delete operations
+ */
 class CategoryAdapter(private val onDeleteClick: (Category) -> Unit) :
     ListAdapter<Category, CategoryAdapter.CategoryViewHolder>(CategoryDiffCallback()) {
 

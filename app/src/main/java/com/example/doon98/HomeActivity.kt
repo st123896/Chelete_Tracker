@@ -6,10 +6,18 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.ContextCompat.startActivity
 import com.example.doon98.databinding.ActivityHomeBinding
 
+/**
+ * Main dashboard activity with navigation buttons
+ * Features:
+ * - Launch point for key features
+ * - Buttons for adding expenses, managing categories, and setting budgets
+ * - Intent-based navigation to other activities
+ */
 class HomeActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityHomeBinding
-
+    // Setup click listeners for all main actions
+    // Launch appropriate activities based on user selection
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityHomeBinding.inflate(layoutInflater)

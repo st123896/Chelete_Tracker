@@ -15,10 +15,20 @@ import java.text.SimpleDateFormat
 import java.util.Date
 import java.util.Locale
 
+/**
+ * RecyclerView adapter for displaying Expense items
+ * Features:
+ * - DiffUtil for efficient updates
+ * - Glide for image loading
+ * - Click listeners for item interaction
+ * - Date formatting for display
+ */
 
 class ExpenseAdapter(private val onClick: (Expense) -> Unit) :
     ListAdapter<Expense, ExpenseAdapter.ExpenseViewHolder>(ExpenseDiffCallback()) {
-
+    // ViewHolder binds expense data to views
+    // Handles photo visibility and loading
+    // Formats dates for display
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ExpenseViewHolder {
         val binding = ItemExpenseBinding.inflate(
             LayoutInflater.from(parent.context),

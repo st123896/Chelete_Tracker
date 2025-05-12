@@ -8,7 +8,13 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.ViewModelProvider
 import com.example.doon98.Models.UserViewModel
 import com.example.doon98.databinding.ActivityLoginBinding
-
+/**
+ * Handles user authentication and login functionality
+ * - Validates user credentials against database
+ * - Stores user ID in SharedPreferences upon successful login
+ * - Navigates to HomeActivity after login
+ * - Provides registration navigation
+ */
 class LoginActivity : AppCompatActivity() {
     private lateinit var binding: ActivityLoginBinding
     private lateinit var userViewModel: UserViewModel

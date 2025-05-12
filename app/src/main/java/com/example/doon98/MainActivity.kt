@@ -17,7 +17,13 @@ import com.example.doon98.ui.BudgetFragment
 import com.example.doon98.ui.CategoriesFragment
 import com.example.doon98.ui.ExpensesFragment
 import com.google.android.material.navigation.NavigationView
-
+/**
+ * Main container activity with navigation drawer
+ * - Hosts fragments for different features (Expenses, Categories, Budget)
+ * - Manages navigation between fragments
+ * - Handles logout functionality
+ * - Supports deep linking to specific fragments
+ */
 class MainActivity : AppCompatActivity() {
     private lateinit var binding: ActivityMainBinding
     private lateinit var appBarConfiguration: AppBarConfiguration

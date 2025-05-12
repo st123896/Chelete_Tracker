@@ -24,6 +24,14 @@ import java.util.Calendar
 import java.util.Date
 import java.util.Locale
 
+/**
+ * Handles expense creation and saving
+ * - Manages expense form with validation
+ * - Supports photo capture and storage
+ * - Date picker for expense date selection
+ * - Dynamic category spinner population
+ * - File provider for camera operations
+ */
 
 class AddExpenseActivity : AppCompatActivity() {
     private lateinit var binding: ActivityAddExpenseBinding

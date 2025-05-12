@@ -8,7 +8,13 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.ViewModelProvider
 import com.example.doon98.Models.UserViewModel
 import com.example.doon98.RoomDb.User
-
+/**
+ * Handles new user registration
+ * - Validates registration form inputs
+ * - Checks for username availability
+ * - Creates new user accounts in database
+ * - Provides feedback during registration process
+ */
 class RegisterActivity : AppCompatActivity() {
     private lateinit var userViewModel: UserViewModel
     private lateinit var etUsername: EditText

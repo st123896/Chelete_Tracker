@@ -8,7 +8,13 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.doon98.Models.ExpenseViewModel
 import com.example.doon98.databinding.ActivityExpenseListBinding
-
+/**
+ * Displays list of user expenses
+ * - Shows expense items in RecyclerView
+ * - Observes expense data changes
+ * - Supports potential item click actions
+ * - Debug logging for expense loading
+ */
 class ExpenseListActivity : AppCompatActivity() {
     private lateinit var binding: ActivityExpenseListBinding
     private lateinit var expenseViewModel: ExpenseViewModel
