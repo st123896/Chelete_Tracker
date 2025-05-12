@@ -29,3 +29,30 @@ Budget Management:
   User System:
   - Secure user authentication
   - Personalized data for each user
+
+
+ Key Components
+
+1. Database Layer:
+   - Room Database with entities: `User`, `Category`, `Expense`, `BudgetGoal`
+   - DAO interfaces for each entity with suspend functions
+
+2. Repository Layer:
+   - `BudgetGoalRepository`, `ExpenseRepository`, `CategoryRepository`, `UserRepository`
+   - Abstracts data sources from ViewModels
+   - Handles all database operations
+
+3. ViewModel Layer:
+   - `BudgetGoalViewModel`, `ExpenseViewModel`, `CategoryViewModel`, `UserViewModel`
+   - Provides data to UI components
+   - Survives configuration changes
+   - Uses coroutines for background operations
+
+4. UI Layer:
+   - Fragments: `BudgetFragment`, `ExpensesFragment`, `CategoriesFragment`
+   - ViewBinding for type-safe view access
+   - RecyclerView with custom adapters
+   - AlertDialogs for user input
+
+
+
