@@ -4,7 +4,10 @@ import androidx.room.Dao
 import androidx.room.Insert
 import androidx.room.Query
 
-@Dao
+// Data Access Object (DAO) for User entity operations
+// Defines methods to interact with the user table in the database
+
+@Dao// Marks this interface as a Room DAO
 interface UserDao {
     @Insert
     suspend fun insert(user: User)

@@ -4,8 +4,10 @@ import androidx.room.Dao
 import androidx.room.Insert
 import androidx.room.Query
 import androidx.room.Update
+// Data Access Object (DAO) for BudgetGoal entity operations
+// Defines methods to interact with the budget_goals table in the database
 
-@Dao
+@Dao // Marks this interface as a Room DAO
 interface BudgetGoalDao {
     @Insert
     suspend fun insert(goal: BudgetGoal)

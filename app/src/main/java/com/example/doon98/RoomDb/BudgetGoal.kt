@@ -4,6 +4,7 @@ import androidx.room.ColumnInfo
 import androidx.room.Entity
 import androidx.room.PrimaryKey
 
+// table name of the budgetgoals
 @Entity(tableName = "budget_goals")
 data class BudgetGoal(
     @PrimaryKey(autoGenerate = true) val id: Int = 0,

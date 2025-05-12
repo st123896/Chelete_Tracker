@@ -4,8 +4,9 @@ import androidx.room.Dao
 import androidx.room.Delete
 import androidx.room.Insert
 import androidx.room.Query
-
-@Dao
+// Data Access Object (DAO) for Expense entity operations
+// Defines methods to interact with the expenses table in the database
+@Dao// Marks this interface as a Room DAO
 interface ExpenseDao {
     @Insert
     suspend fun insert(expense: Expense)

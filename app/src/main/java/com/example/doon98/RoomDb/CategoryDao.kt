@@ -5,8 +5,9 @@ import androidx.room.Delete
 import androidx.room.Insert
 import androidx.room.Query
 
-
-@Dao
+// Data Access Object (DAO) for category entity operations
+// Defines methods to interact with the categories table in the database
+@Dao// Marks this interface as a Room DAO
 interface CategoryDao {
     @Insert
     suspend fun insert(category: Category)
