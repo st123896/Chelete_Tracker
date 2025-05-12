@@ -55,12 +55,12 @@ Budget Management:
    - AlertDialogs for user input
 
 
-Technologies Used
-Android Studio
-Kotlin
-RoomDb
+Technologies Used:
+-Android Studio
+-Kotlin
+-RoomDb
 
-References
-This project adapts some code from this source:
-Author: Mkr Developer
-Source:
+References:
+-This project adapts some code from this source:
+-Author: Mkr Developer
+-Source:
