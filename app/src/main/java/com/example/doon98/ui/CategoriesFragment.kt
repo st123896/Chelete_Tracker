@@ -35,6 +35,7 @@ class CategoriesFragment : Fragment() {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
+        // Inflate the layout using view binding
         _binding = FragmentCategoriesBinding.inflate(inflater, container, false)
         return binding.root
     }
@@ -42,18 +43,24 @@ class CategoriesFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
+        // Get user ID from shared preferences
         userId = requireActivity().getSharedPreferences("user_prefs", Context.MODE_PRIVATE)
             .getInt("user_id", 0)
 
+
+        // Initialize ViewModel
         categoryViewModel = ViewModelProvider(this)[CategoryViewModel::class.java]
 
+
+        // Setup RecyclerView adapter with delete click handler
         adapter = CategoryAdapter { category ->
             showDeleteDialog(category)
         }
-
+// Configure RecyclerView
         binding.rvCategories.layoutManager = LinearLayoutManager(requireContext())
         binding.rvCategories.adapter = adapter
 
+        // Setup add category button
         binding.btnAddCategory.setOnClickListener {
             showAddCategoryDialog()
         }
@@ -61,12 +68,15 @@ class CategoriesFragment : Fragment() {
         loadCategories()
     }
 
+    // Load categories
     private fun loadCategories() {
         categoryViewModel.getCategoriesByUser(userId).observe(viewLifecycleOwner) { categories ->
             adapter.submitList(categories)
         }
     }
-
+    /**
+     * Loads categories for the current user
+     */
     private fun showAddCategoryDialog() {
         val editText = EditText(requireContext())
         editText.hint = "Category name"
@@ -84,7 +94,10 @@ class CategoriesFragment : Fragment() {
             .setNegativeButton("Cancel", null)
             .show()
     }
-
+    /**
+     * Shows confirmation dialog before deleting a category
+     * @param category The category to be deleted
+     */
     private fun showDeleteDialog(category: Category) {
         AlertDialog.Builder(requireContext())
             .setTitle("Delete Category")

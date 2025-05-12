@@ -46,6 +46,7 @@ class ExpenseListActivity : AppCompatActivity() {
                 Log.d("ExpenseList", "Second expense: ${expenses[1]}")
             }
             adapter.submitList(expenses)
+            adapter.submitList(expenses.toList()) // Create a new list instance
         }
 
     }
