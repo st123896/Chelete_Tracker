@@ -56,11 +56,17 @@ Budget Management:
 
 
 Technologies Used:
+
 -Android Studio
+
 -Kotlin
+
 -RoomDb
 
 References:
+
 -This project adapts some code from this source:
+
 -Author: Mkr Developer
+
 -Source:
