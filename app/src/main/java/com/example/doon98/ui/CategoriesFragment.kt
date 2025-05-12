@@ -15,12 +15,19 @@ import com.example.doon98.Models.CategoryViewModel
 import com.example.doon98.R
 import com.example.doon98.RoomDb.Category
 import com.example.doon98.databinding.FragmentCategoriesBinding
-
+/**
+ * Fragment for managing expense categories
+ * Allows adding, viewing and deleting categories
+ */
 class CategoriesFragment : Fragment() {
+    // View binding variables
     private var _binding: FragmentCategoriesBinding? = null
     private val binding get() = _binding!!
+    // ViewModel for category data
     private lateinit var categoryViewModel: CategoryViewModel
     private lateinit var adapter: CategoryAdapter
+
+    // RecyclerView adapter
     private var userId: Int = 0
 
     override fun onCreateView(
